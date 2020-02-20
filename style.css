@@ -1,0 +1,24 @@
+html {
+    box-sizing: border-box;
+    font-size: 14px;
+    font-family: 'Saira Semi Condensed', sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    background-color: #494949;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.counter {
+    font-size: 20em;
+    color: #FFFFFF
+}
