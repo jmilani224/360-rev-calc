@@ -56,6 +56,7 @@ const daysPassed = callBack => {
 }
 
 const scottGoal = 2000000; // This is what Scott H thinks we'll need in 360 revenue to hit the goal
+const smoothieCost = 7;
 let revGoal = scottGoal;
 
 const daysLeft = callBack => {
@@ -64,9 +65,9 @@ const daysLeft = callBack => {
 
 const remainingDays = daysLeft(daysPassed(todaysDate));
 
-const personDays = v => {
-  const pDays = revGoal / 7;
-  return pDays / v;
+const personDays = days => {
+  const pDays = revGoal / smoothieCost;
+  return pDays / days;
 }
 
 
@@ -87,8 +88,12 @@ let revenue;
 const reCalc = () => {
   revenue = input.value;
   revGoal = scottGoal;
-  revGoal -=revenue; 
-  counter.innerHTML = Math.ceil(personDays(remainingDays));
+  revGoal -= revenue; 
+  if (parseInt(input.value, 10) == NaN) {
+    return
+  } else {
+    counter.innerHTML = Math.ceil(personDays(remainingDays));
+  }
 }
 
 button.addEventListener("click", reCalc);
