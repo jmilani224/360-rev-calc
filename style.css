@@ -8,6 +8,13 @@ body {
     margin: 0;
 }
 
+.revenue {
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 1.5em;
+    margin: 0.5em;
+}
+
 .container {
     height: 100vh;
     width: 100vw;
@@ -18,7 +25,48 @@ body {
     flex-direction: column;
 }
 
+form {
+    height: auto;
+    width: auto;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.input {
+    color: #494949;
+    font-family: 'Saira Semi Condensed', sans-serif;
+    font-size: 1.5em;
+    padding: 0;
+    width: 15vw;
+    height: 1.5em;
+    text-align: center;
+    text-decoration: none;
+    margin-bottom: 0.5em;
+}
+
+.submit {
+    background-color: #FFFFFF;
+    color: #494949;
+    font-family: 'Saira Semi Condensed', sans-serif;
+    font-size: 1.5em;
+    width: 15vw;
+    height: 1.7em;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 .counter {
     font-size: 20em;
-    color: #FFFFFF
+    color: #FFFFFF;
+    //line-height: 1em;
+}
+
+.subs {
+    color: #ffffff;
+    font-size: 2em;
+    margin-top: -50px;
 }

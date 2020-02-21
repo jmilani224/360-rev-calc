@@ -55,6 +55,9 @@ const daysPassed = callBack => {
   
 }
 
+const scottGoal = 2000000; // This is what Scott H thinks we'll need in 360 revenue to hit the goal
+let revGoal = scottGoal;
+
 const daysLeft = callBack => {
   return 365 - callBack;
 }
@@ -62,12 +65,30 @@ const daysLeft = callBack => {
 const remainingDays = daysLeft(daysPassed(todaysDate));
 
 const personDays = v => {
-  const pDays = 1000000 / 7.50;
+  const pDays = revGoal / 7;
   return pDays / v;
 }
 
-const counter = document.querySelector('.counter');
 
+const counter = document.querySelector('.counter');
+const subs = Math.ceil(personDays(remainingDays));
 counter.innerHTML = Math.ceil(personDays(remainingDays));
 
-//console.log(remainingDays);
+const form = document.querySelector("form")
+const input = document.querySelector('.input');
+const button = document.querySelector('.submit');
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+});
+
+let revenue;
+
+const reCalc = () => {
+  revenue = input.value;
+  revGoal = scottGoal;
+  revGoal -=revenue; 
+  counter.innerHTML = Math.ceil(personDays(remainingDays));
+}
+
+button.addEventListener("click", reCalc);
