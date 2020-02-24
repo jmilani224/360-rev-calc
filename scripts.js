@@ -72,8 +72,8 @@ const personDays = days => {
 
 
 const counter = document.querySelector('.counter');
-const subs = Math.ceil(personDays(remainingDays));
-counter.innerHTML = Math.ceil(personDays(remainingDays));
+let subs = Math.ceil(personDays(remainingDays));
+counter.innerHTML = subs;
 
 const form = document.querySelector("form")
 const input = document.querySelector('.input');
@@ -89,7 +89,7 @@ const reCalc = () => {
   revenue = input.value;
   revGoal = scottGoal;
   revGoal -= revenue; 
-  if (parseInt(input.value, 10) == NaN) {
+  if (parseInt(input.value, 10) === NaN) {
     return
   } else {
     counter.innerHTML = Math.ceil(personDays(remainingDays));
