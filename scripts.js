@@ -60,7 +60,7 @@ const smoothieCost = 7;
 let revGoal = scottGoal;
 
 const daysLeft = callBack => {
-  return 365 - callBack;
+  return 261 - callBack;
 }
 
 const remainingDays = daysLeft(daysPassed(todaysDate));
