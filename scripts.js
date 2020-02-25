@@ -10,44 +10,44 @@ const todaysDate = () => {
 
 const daysPassed = callBack => {
   const dateArr = callBack();
-  let dayValue = dateArr[1];
+  let dayValue = dateArr[1] - Math.floor(((dateArr[1] / 7) * 2)); 
   let monthValue;
   switch (dateArr[0]) {
     case 0:
       monthValue = 0; //jan
       break;
     case 1:
-      monthValue = 31; //feb
+      monthValue = 23; //feb
       break;
     case 2:
-      monthValue = 59; //mar
+      monthValue = 43; //mar
       break;
     case 3:
-      monthValue = 90; //apr
+      monthValue = 65; //apr
       break;
     case 4:
-      monthValue = 120; //may
+      monthValue = 87; //may
       break;
     case 5:
-      monthValue = 151; //jun
+      monthValue = 108; //jun
       break;
     case 6:
-      monthValue = 181; //jul
+      monthValue = 130; //jul
       break;
     case 7:
-      monthValue = 212; //aug
+      monthValue = 153; //aug
       break;
     case 8:
-      monthValue = 243; //sep
+      monthValue = 174; //sep
       break;
     case 9:
-      monthValue = 273; //oct
+      monthValue = 196; //oct
       break;
     case 10:
-      monthValue = 304; //nov
+      monthValue = 218; //nov
       break;
     case 11:
-      monthValue = 334; //dec
+      monthValue = 239; //dec
       break;
   }
   
