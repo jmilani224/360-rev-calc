@@ -10,44 +10,44 @@ const todaysDate = () => {
 
 const daysPassed = callBack => {
   const dateArr = callBack();
-  let dayValue = dateArr[1] - Math.floor(((dateArr[1] / 7) * 2)); 
+  let dayValue = dateArr[1] - Math.floor(((dateArr[1] / 7)) * 2);
   let monthValue;
   switch (dateArr[0]) {
     case 0:
-      monthValue = 0; //jan
+      monthValue = 0; //jan: 23
       break;
     case 1:
-      monthValue = 23; //feb
+      monthValue = 23; //feb: 20
       break;
     case 2:
-      monthValue = 43; //mar
+      monthValue = 43; //mar: 22
       break;
     case 3:
-      monthValue = 65; //apr
+      monthValue = 65; //apr: 22
       break;
     case 4:
-      monthValue = 87; //may
+      monthValue = 87; //may: 21
       break;
     case 5:
-      monthValue = 108; //jun
+      monthValue = 108; //jun: 22
       break;
     case 6:
-      monthValue = 130; //jul
+      monthValue = 130; //jul: 23
       break;
     case 7:
-      monthValue = 153; //aug
+      monthValue = 153; //aug: 21
       break;
     case 8:
-      monthValue = 174; //sep
+      monthValue = 174; //sep: 22
       break;
     case 9:
-      monthValue = 196; //oct
+      monthValue = 196; //oct: 22
       break;
     case 10:
-      monthValue = 218; //nov
+      monthValue = 218; //nov: 21
       break;
     case 11:
-      monthValue = 239; //dec
+      monthValue = 239; //dec: 23
       break;
   }
   
@@ -60,7 +60,7 @@ const smoothieCost = 7;
 let revGoal = scottGoal;
 
 const daysLeft = callBack => {
-  return 261 - callBack;
+  return 262 - callBack;
 }
 
 const remainingDays = daysLeft(daysPassed(todaysDate));
